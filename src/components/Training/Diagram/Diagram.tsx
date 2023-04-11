@@ -41,7 +41,7 @@ const Diagram: React.FC<Props> = ({ activeTraining, createTraining }) => {
   const axisBottom =
     data[data.findIndex((el) => el.id === 'Plan')].data.length > 10
       ? null
-      : (axisBottomObj as any);
+      : (axisBottomObj as object);
 
   const chooseDataGenerateStrategy = () => {
     if (activeTraining) {
