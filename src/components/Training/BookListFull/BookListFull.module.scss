@@ -1,0 +1,8 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+
+.item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}

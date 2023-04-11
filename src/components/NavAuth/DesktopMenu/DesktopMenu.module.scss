@@ -1,0 +1,66 @@
+@import '../../../scss/variables';
+@import '../../../scss//mixins';
+
+.linksWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-color $cubic;
+  svg {
+    fill: $icon-color;
+  }
+
+  &:first-child {
+    top: 2px;
+    margin-right: 14px;
+  }
+
+  &:last-of-type {
+    margin-right: 25px;
+    &::after {
+      display: block;
+      content: '';
+      width: 1px;
+      height: 33px;
+      background-color: $icon-color;
+
+      position: absolute;
+      right: -11px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $bg-color-input;
+  }
+}
+
+.logoutBtn {
+  font-family: $primary-font;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2.7;
+  text-decoration-line: underline;
+  color: $primary-text-color;
+  transition: color $cubic;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &:hover {
+    color: $hover-color;
+  }
+}

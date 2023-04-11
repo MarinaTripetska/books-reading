@@ -1,0 +1,65 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.btn {
+  border: none;
+  padding: 12px 0;
+  cursor: pointer;
+  text-align: center;
+  transition: all 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.google {
+  width: 150px;
+  display: flex;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: $bg-color-input;
+  color: $secondary-text-color;
+  box-shadow: $inner-shadow;
+
+  @include for-size(tablet) {
+    box-shadow: $outer-shadow;
+  }
+}
+
+.google::before {
+  content: '';
+
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  background-size: contain;
+  background-image: url('../../assets/img/google.svg');
+}
+
+.google:hover {
+  box-shadow: $outer-shadow;
+  color: $hover-color;
+
+  @include for-size(tablet) {
+    box-shadow: $inner-shadow;
+  }
+}
+
+.login {
+  color: #ffffff;
+  background-color: $accent-color;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+
+  @include for-size(tablet) {
+    width: 320px;
+  }
+}
+
+.login:hover {
+  background-color: $hover-color;
+}

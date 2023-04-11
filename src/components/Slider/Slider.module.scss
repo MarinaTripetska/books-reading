@@ -1,0 +1,19 @@
+@import '../../scss/base.scss';
+
+.carouselContainer {
+  margin: 0 auto;
+  width: 100%;
+
+  min-height: 564px;
+
+  @include for-size(tablet) {
+    height: 590px;
+  }
+  @include for-size(desktop) {
+    height: 430px;
+  }
+}
+
+.carouselItem {
+  padding-bottom: 30px;
+}

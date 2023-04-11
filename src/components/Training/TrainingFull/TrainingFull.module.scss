@@ -1,0 +1,54 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+
+.wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 36px;
+
+  @include for-size(tablet-only) {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 56px;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 886px;
+  width: 100%;
+  gap: 40px;
+  @include for-size(tablet-only) {
+    max-width: 100%;
+    order: 2;
+  }
+}
+
+.sidebar {
+  max-width: 275px;
+  width: 100%;
+
+  @include for-size(tablet-only) {
+    max-width: 100%;
+    order: 1;
+  }
+}
+
+.countdownsWrap {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 15px;
+  gap: 30px;
+
+  @include for-size(mobile-only) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.buttonWrap {
+  align-self: center;
+}

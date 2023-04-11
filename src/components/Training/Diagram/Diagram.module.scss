@@ -1,0 +1,72 @@
+@import '../../../scss/base';
+
+.thumb {
+  @include for-size(mobile-only) {
+    width: 270px;
+    height: 290px;
+  }
+
+  margin: 0 auto;
+  width: 678px;
+  height: 340px;
+
+  padding: 14px 18px;
+
+  background: $txt-color-white;
+  box-shadow: 0px 2px 3px rgba(9, 30, 63, 0.25);
+  position: relative;
+
+  @include for-size(desktop) {
+    width: 886px;
+    padding: 25px 37px 50px 37px;
+  }
+}
+
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #40404e43;
+}
+.title {
+  position: absolute;
+  top: 10px;
+  left: 45px;
+
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: $primary-text-color;
+
+  @include for-size(correct-mobile-only) {
+    left: 20px;
+    font-size: 10px;
+    line-height: 2;
+  }
+
+  span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+
+    font-family: $primary-font;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 3.17;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $primary-text-color;
+    background-color: $bg-color-input;
+  }
+}

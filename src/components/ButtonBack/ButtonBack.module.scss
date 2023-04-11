@@ -1,0 +1,18 @@
+@import '../../scss/base';
+
+.buttonBack {
+  all: unset;
+  /* background: initial;
+  border: initial;
+  font: initial; */
+
+  width: 24px;
+  height: 12px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:hover {
+ /*    scale: 120%; */
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../scss/variables';
+
+.logoImg {
+  text-align: center;
+  transition: all $cubic;
+  cursor: pointer;
+
+  &:hover {
+    filter: drop-shadow($active-shadow);
+  }
+}

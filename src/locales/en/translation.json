@@ -1,0 +1,318 @@
+{
+  "auth": {
+    "login": "Login",
+    "name": "Name *",
+    "email": "Email *",
+    "password": "Password *",
+    "confirm": "Confirm password *",
+    "exAcc": "Already have an account",
+    "regTitle": "Books reading",
+    "regSubTO": "Will help you to",
+    "regGoal": "Create your goal faster and proceed to read",
+    "regProcess": "Divide process proportionally for each day",
+    "regSuccess": "Track your success",
+    "regSubTT": "You may also",
+    "regPoint": "Pose your own independent point of view",
+    "regScills": "Improve your professional skills according to new knowledge",
+    "regInter": "Become an interesting interlocutor",
+    "register": "Register",
+    "logout": "Logout"
+  },
+
+  "library": {
+    "title": "Book title",
+    "author": "Author",
+    "year": "Publication date",
+    "page": "Amount of pages",
+    "yearShort": "Year",
+    "pageShort": "Pages",
+    "rating": "Rating",
+    "resume": "Resume",
+    "add": "Add",
+    "done": "Already read",
+    "active": "Reading now",
+    "pending": "Going to read",
+    "step": "Step",
+    "createLib": "Create your own library",
+    "cerateLibDo": "Add there books which you are going to read.",
+    "createTrain": "Create your first training",
+    "createTrainDo": "Set a goal, choose period, start training.",
+    "leftRating": "Choose rating of the book",
+    "next": "Next",
+    "back": "Back",
+    "save": "Save",
+    "edit": "Edit",
+    "status-done": "Already read",
+    "status-pending": "Going to read"
+  },
+
+  "introPage": {
+    "aboutUs": "About us",
+    "aboutApp": "About app",
+    "seeMore": "see more",
+    "helpYou": "Will help you to",
+    "youMayAlso": "You may also",
+    "titleApp": "Do you know what is 'Book Reading'?",
+    "titleAuthors": "Do you know who develop 'Book Reading'?"
+  },
+
+  "navigation": {
+    "library": "Library",
+    "training": "Training"
+  },
+
+  "logoutChoiceModal": {
+    "text": "Are you sure you want to log out?",
+    "confirm": "OK",
+    "reset": "Cancel"
+  },
+
+  "deleteBookModal": {
+    "text": "Are you sure you want to delete this book?",
+    "confirm": "OK",
+    "reset": "Cancel"
+  },
+
+  "confirmationModal": {
+    "YouAreGoodButNotEnough": "You're good, but you need to do it faster! Next time you will succeed!",
+    "confirm": "OK"
+  },
+
+  "404Page": {
+    "articleNotFound": "Article not found",
+    "pageCanNotBeFound": "The page you requested cannot be found.",
+    "returnToHomepage": "Return to the Homepage"
+  },
+
+  "quotes": [
+    {
+      "text": "A room without books is like a person without a soul.",
+      "author": "O. P. Dovzhenko"
+    },
+    {
+      "text": "...A person who exists without a book seems strange and unnatural.",
+      "author": "T.G. Shevchenko"
+    },
+    {
+      "text": "A book is a source of education, knowledge, and if enrichment, then cultural and spiritual enrichment.",
+      "author": "M.T. Rylsky"
+    },
+    {
+      "text": "Whoever loves the book will go far in his development. The book saves the soul from woodiness.",
+      "author": "T.G. Shevchenko"
+    },
+    {
+      "text": "...books are written in order to be read, and read in order to reflect on what has been read.",
+      "author": "I.Ya. Franko"
+    },
+    {
+      "text": "Books are rivers that water the seas.",
+      "author": "Yaroslav Mudry"
+    },
+    {
+      "text": "Books are needed to remind a person that his original thoughts are not so new.",
+      "author": "A. Lincoln"
+    },
+    {
+      "text": "A house without a book is like a body without a soul.",
+      "author": "Cicero"
+    },
+    {
+      "text": "A person with a good book in his hands can never be lonely.",
+      "author": "K. Goldoni"
+    },
+    {
+      "text": "Books are best friends. You can turn to them in all difficult moments of life. They will never betray.",
+      "author": "A. Dode"
+    },
+    {
+      "text": "Some books make us dream, others immerse us in reality, but all of them are imbued with the most important thing for the author - sincerity.",
+      "author": "P. Coelho"
+    },
+    {
+      "text": "Mind did not come from books, but books came from mind.",
+      "author": "G. Skovoroda"
+    }
+  ],
+
+  "authors": [
+    {
+      "name": "Serhii",
+      "role": "Team Lead",
+      "gitHubPath": "https://github.com/serhiishf",
+      "cases": [
+        "Setting up web hosting and server infrastructure",
+        "Development of a training page",
+        "Leading and managing a team's work"
+      ]
+    },
+    {
+      "name": "Kateryna",
+      "role": "Developer",
+      "gitHubPath": "https://github.com/Katerina-Zamiatina",
+      "cases": ["User authorisation", "Login and Register page", "Library page"]
+    },
+    {
+      "name": "Maryna",
+      "role": "Developer",
+      "gitHubPath": "https://github.com/MarinaTripetska",
+      "cases": [
+        "Functionality of Backend",
+        "This beautiful Intro Page",
+        "404 Page",
+        "Modal windows and Portal Component",
+        "Diagram Component and logic",
+        "Bug fixes and code review"
+      ]
+    },
+
+    {
+      "name": "RS School",
+      "role": "Our school",
+      "gitHubPath": "https://rs.school/",
+      "cases": [
+        "we learn HTML and CSS",
+        "JS, TS and OOP",
+        "Node.js",
+        "thank RS School we found new friends"
+      ]
+    }
+  ],
+
+  "aboutApp": [
+    {
+      "title": "Book Reading",
+      "casesList1": [
+        "Create your goal faster and proceed to read",
+        "Divide process proportionally for each day ",
+        "Track your success"
+      ],
+      "casesList2": [
+        "Pose your own independent point of view",
+        "Improve your professional skills according to new knowledge",
+        "Become an interesting interlocutor"
+      ]
+    },
+    {
+      "title": "Your own account",
+      "casesList1": [
+        "Create your own account",
+        "Protect your data",
+        "Do not lose the names of the books that you have been advised to read"
+      ],
+      "casesList2": [
+        "Come back to the app later and find here all the books you've saved",
+        "Add private comments to books you've already read",
+        "Use the application without payments or advertising"
+      ]
+    },
+    {
+      "title": "List of books",
+      "casesList1": [
+        "Add new book to the list that you plan to read",
+        "Change the status of books to 'already read'",
+        "Add feedback or main theses of the book you read"
+      ],
+      "casesList2": [
+        "Do not forget the name of the book or the author",
+        "Track how many books you've read"
+      ]
+    },
+    {
+      "title": "Book marathon",
+      "casesList1": [
+        "Start a personal reading marathon",
+        "Track your progress",
+        "Add the number of pages you read per day"
+      ],
+      "casesList2": [
+        "Keep up with your own plan",
+        "Celebrate your own achievements!"
+      ]
+    },
+    {
+      "title": "App in development",
+      "casesList1": [
+        "Become a more attentive user",
+        "Try yourself in the role of a Dev Tester"
+      ],
+      "casesList2": [
+        "Leave your feedback about the application in social networks",
+        "Inform us about the issue",
+        "Share this app with your friends so they can try it too!"
+      ]
+    }
+  ],
+
+  "validation": {
+    "required": "Required",
+    "valid": "Must be a valid email",
+    "pass": "Password should be letters and numbers",
+    "notMatch": "Your passwords do not match.",
+    "confirm": "Please confirm your password",
+    "noSame": "Your passwords do not match",
+    "min3": "Min 3 symbols",
+    "min1": "Min 1 symbol",
+    "max40": "Too long...",
+    "year": "Year should be number",
+    "min4": "Min 4 symbols",
+    "max4": "Max 4 symbols",
+    "pages": "Pages should be number",
+    "min8": "Min 8 symbols",
+    "min2": "Min 2 symbols",
+    "min5": "Min 5 symbols",
+    "max5": "Max 5 symbols",
+    "max100": "Max 100 symbols",
+    "max50": "Max 50 symbols",
+    "max2023": "Max year 2023"
+  },
+
+  "toast": {
+    "successReg": "Registration complete. Log in to access the app.",
+    "errorReg1": "This email is already exist.",
+    "errorReg2": "Registration failed.",
+    "errorLog1": "Wrong email or password.",
+    "errorLog2": "Something went wrong. Try again.",
+    "existedBook": "Book is already exist. Check all categories.",
+    "errorOnCreateTraining400": "Something went wrong. Try refreshing the page, it usually helps :)"
+  },
+
+  "training": {
+    "chooseBookFromLibrary": "Choose books from the library...",
+    "noBookMore": "No book more...",
+    "Register": "Register",
+    "myTraining": "My training",
+    "myGoals": "My goals",
+    "numberOfBooks": "Amount of books",
+    "numberOfDays": "Amount of days",
+    "leftBooks": "Books left",
+    "add": "Add",
+    "startTaining": "Start training",
+    "addResult": "Add result",
+    "bookTitle": "Book title",
+    "author": "Author",
+    "year": "Year",
+    "pages": "Pages",
+    "date": "Date",
+    "amountOfPages": "Amount of pages",
+    "statistics": "Statistics",
+    "start": "Start",
+    "finish": "Finish",
+    "diagramTitle": "Number of pages / day",
+    "confirmDeleteTXT": "Are you sure you want to delete the training? All your books will be marked as 'unread'!",
+    "confirmDelete": "Confirm",
+    "resetDelete": "Cancel",
+    "yearCountdown": "Year countdown",
+    "goalCountdown": "Goal countdown",
+    "congrats": "Congratulations! You have finished your training! Don't stop, proceed to create a new one!",
+    "removeTraining": "Remove training",
+    "page": "p."
+  },
+
+  "countdown": {
+    "days": "DAYS",
+    "hrs": "HRS",
+    "mins": "MINS",
+    "secs": "SECS"
+  }
+}

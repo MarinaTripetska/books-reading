@@ -1,0 +1,72 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 25px;
+
+  @include for-size(tablet) {
+    background-color: #fff;
+    width: 400px;
+    padding: 30px 40px;
+  }
+}
+
+.inputWrapper {
+  display: block;
+  position: relative;
+  width: 97%;
+}
+
+.notification {
+  // width: 150px;
+  position: absolute;
+  bottom: 10px;
+  text-align: start;
+  color: $hover-color;
+}
+
+.link {
+  color: $accent-color;
+}
+
+.btnEye {
+  bottom: 15px;
+  right: 15px;
+}
+//it is for all span in project:
+// span {
+//   color: $secondary-text-color;
+// }
+
+.textLog {
+  color: $txt-color-white;
+
+  @include for-size(tablet) {
+    color: $secondary-text-color;
+  }
+}
+
+.loaderWrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: #ffffffac;
+
+  & div {
+    z-index: 1000;
+  }
+}

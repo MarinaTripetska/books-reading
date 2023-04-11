@@ -1,0 +1,176 @@
+@import '../../../scss/container';
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.wrapper {
+  @include for-size(tablet) {
+    width: 594px;
+    margin: 0 auto;
+  }
+  @include for-size(desktop) {
+    width: 1117px;
+  }
+}
+
+.form {
+  @include for-size(desktop) {
+    display: grid;
+    grid-template-columns: 346px 540px auto;
+    column-gap: 15px;
+  }
+}
+
+.inputWrapper > label {
+  color: $secondary-text-color;
+}
+
+.inputsTablet {
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include for-size(desktop) {
+    display: grid;
+    grid-template-columns: 250px 130px 130px;
+    column-gap: 15px;
+  }
+}
+
+.wrapperAuthor {
+  @include for-size(tablet) {
+    width: 240px;
+  }
+}
+
+.inputWrapper > label > input {
+  background-color: $txt-color-white;
+}
+
+.btn {
+  align-self: center;
+  justify-self: end;
+}
+
+.addBtn {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid $primary-text-color;
+  padding: 12px 70px;
+  cursor: pointer;
+  background-color: $bg-color-blue;
+  text-align: center;
+  transition: all 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  @include for-size(desktop) {
+    margin: 0;
+    display: flex;
+  }
+}
+
+.addBtn:hover {
+  box-shadow: $active-shadow;
+  border-color: $accent-color;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.notification {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  text-align: start;
+  color: rgb(184, 0, 0);
+
+  @include for-size(tablet) {
+    bottom: 0;
+  }
+}
+
+.inputModal {
+  display: block;
+  width: 100%;
+}
+
+.inputModal > label {
+  color: $secondary-text-color;
+}
+
+.inputModal > label > input {
+  height: 38px;
+  margin-bottom: 10px;
+}
+
+.radioWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include for-size(tablet) {
+    flex-direction: row;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.radioLabelWrapper {
+  float: left;
+}
+
+.customRadio [type='radio']:checked,
+.customRadio [type='radio']:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.customRadio [type='radio']:checked + .radioLabel,
+.customRadio [type='radio']:not(:checked) + .radioLabel {
+  position: relative;
+  padding: 6px 0 4px 38px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.customRadio [type='radio']:checked + .radioLabel:before,
+.customRadio [type='radio']:not(:checked) + .radioLabel:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.customRadio [type='radio']:checked + .radioLabel:after,
+.customRadio [type='radio']:not(:checked) + .radioLabel:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: $accent-color;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.customRadio [type='radio']:not(:checked) + .radioLabel:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.customRadio [type='radio']:checked + .radioLabel:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

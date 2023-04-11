@@ -1,0 +1,60 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+
+.overlayControlPanel {
+
+}
+
+.addTrainingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.controlPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.buttonBackWrap {
+  &.hidden {
+    display: none;
+  }
+}
+
+.calendarsWrap {
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+  @include for-size(mobile-only) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.selectWrap {
+  display: flex;
+  gap: 46px;
+  @include for-size(tablet-only) {
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+  }
+}
+
+.dropdownWrap {
+  width: 100%;
+}
+
+
+.btnPLusWrap {
+  display: none;
+
+}
+
+.buttonDoneWrap {
+  max-width: 200px;
+  align-self: center;
+}

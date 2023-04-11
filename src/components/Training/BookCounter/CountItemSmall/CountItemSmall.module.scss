@@ -1,0 +1,60 @@
+@import '../../../../scss/mixins';
+$widthItem: 100px;
+$heightItem: 100px;
+
+.countItem {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.countBlock {
+  background: #F5F7FA;
+  box-shadow: 4px 4px 8px rgba(36, 42, 55, 0.15);
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include for-size(tablet-only) {
+    height: 60px;
+    width: 100px;
+  }
+  @include for-size(mobile-only) {
+    height: 63px;
+    width: 63px;
+  }
+}
+
+.counter {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 38px;
+  text-align: center;
+  color: #091E3F;
+  &Highlight {
+    color: #FF6B08;
+  }
+}
+
+.countTitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+  color: #898F9F;
+  width: 66px;
+  @include for-size(tablet-only) {
+    font-size: 11px;
+    width: 100px;
+  }
+  @include for-size(mobile-only) {
+    width: 63px;
+  }
+}

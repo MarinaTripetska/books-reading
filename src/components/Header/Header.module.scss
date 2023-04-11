@@ -1,0 +1,21 @@
+@import '../../scss/base.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 5px 25px;
+  box-shadow: $active-shadow;
+  //for shadow:
+  position: relative;
+  z-index: 10;
+}
+
+.navigation {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}

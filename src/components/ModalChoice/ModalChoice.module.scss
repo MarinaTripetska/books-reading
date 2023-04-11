@@ -1,0 +1,91 @@
+@import '../../scss/base.scss';
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  padding: 25px;
+  user-select: none;
+  background: $overlay-color;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  padding: 50px;
+  width: 390px;
+  min-height: 206px;
+  background-color: $txt-color-white;
+  box-shadow: 10px 10px 20px $overlay-color;
+  position: relative;
+ 
+
+  @include for-size(correct-mobile-only) {
+    width: 100%;
+    padding: 50px 20px;
+  }
+}
+.text {
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: $primary-text-color;
+}
+
+.buttonsThumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  @include for-size(correct-mobile-only) {
+    gap: 15px;
+  }
+}
+
+.btn {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 38px;
+  color: $primary-text-color;
+  border: none;
+  transition: all $cubic;
+
+  cursor: pointer;
+
+  @include for-size(correct-mobile-only) {
+    width: 98px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $active-shadow;
+  }
+}
+
+.resetBtn {
+  background-color: $txt-color-white;
+  border: 1px solid $primary-text-color;
+}
+
+.confirmBtn {
+  color: $txt-color-white;
+  background: $accent-color;
+}

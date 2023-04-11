@@ -1,0 +1,185 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+
+.bookItem {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: $txt-color-white;
+  padding: 20px;
+  box-shadow: $outer-shadow;
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 5px;
+    align-items: center;
+    padding: 22px 20px;
+    justify-content: space-between;
+  }
+  @include for-size(desktop) {
+    padding-right: 85px;
+  }
+}
+
+.itemDone {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: $txt-color-white;
+  padding: 20px;
+  box-shadow: $outer-shadow;
+
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 5px;
+    align-items: center;
+    padding: 11px 20px;
+    // justify-content: space-between;
+  }
+  @include for-size(desktop) {
+    padding-right: 85px;
+  }
+}
+
+.bookName {
+  display: flex;
+  color: $primary-text-color;
+}
+
+.itemDone > .bookInfo {
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.bookInfo {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 40px;
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  @include for-size(desktop) {
+    justify-items: end;
+  }
+}
+
+.bookInfo > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 0;
+  }
+}
+
+.subtitleMob {
+  color: $secondary-text-color;
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.subtitle {
+  color: $primary-text-color;
+}
+
+.icon {
+  margin-right: 20px;
+  fill: $secondary-text-color;
+}
+
+.iconActive {
+  fill: $accent-color;
+}
+
+.btnEditDone,
+.btnEditPending,
+.btnDelPending,
+.btnDelDone {
+  padding: 0;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-radius: 2px;
+  position: absolute;
+  // left: 0;
+  // top: 10px;
+
+  // @include for-size(tablet) {
+  //   left: 98%;
+  //   top: 0;
+  // }
+  // @include for-size(desktop) {
+  //   left: 105%;
+  // }
+}
+
+.btnEditDone {
+  left: 4px;
+  top: 17px;
+  @include for-size(tablet) {
+    left: 98%;
+    top: 0;
+  }
+  @include for-size(desktop) {
+    left: 105%;
+  }
+}
+
+.btnDelDone {
+  left: 98%;
+  bottom: 107%;
+  @include for-size(tablet) {
+    bottom: 0;
+  }
+  @include for-size(desktop) {
+    left: 105%;
+  }
+}
+
+.btnEditPending {
+  left: 4px;
+  top: 17px;
+  @include for-size(tablet) {
+    left: 98%;
+    top: -15px;
+  }
+  @include for-size(desktop) {
+    left: 105%;
+  }
+}
+
+.btnDelPending {
+  left: 98%;
+  bottom: 107%;
+  @include for-size(tablet) {
+    left: 98%;
+    bottom: -15px;
+  }
+  @include for-size(desktop) {
+    left: 105%;
+  }
+}
+
+.btnEditDone:hover,
+.btnEditPending:hover,
+.btnDelPending:hover,
+.btnDelDone:hover {
+  border: 1px solid $accent-color;
+  box-shadow: $active-shadow;
+}

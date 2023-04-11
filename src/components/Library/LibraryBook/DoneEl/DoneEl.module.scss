@@ -1,0 +1,41 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+.subtitleMob {
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.starWrapper {
+  @include for-size(tablet) {
+    grid-template-columns: auto;
+  }
+}
+
+.resumeBtn {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 12px 34px;
+  cursor: pointer;
+  background-color: $dark-grey;
+  color: #ffffff;
+  text-align: center;
+  transition: all 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: $active-shadow;
+
+  @include for-size(tablet) {
+    padding: 12px 10px;
+  }
+
+  @include for-size(desktop) {
+    padding: 12px 34px;
+  }
+}
+
+.resumeBtn:hover {
+  background-color: $hover-btn-lib;
+}

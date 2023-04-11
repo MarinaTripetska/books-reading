@@ -1,0 +1,34 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.resultsWrapper {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  background-color: $txt-color-white;
+  padding: 20px;
+  box-shadow: $outer-shadow;
+  
+  @include for-size(tablet) {
+    width: 100%;
+    padding-left: 84px;
+    padding-right: 84px;
+  }
+
+  @include for-size(desktop) {
+    width: 275px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.title {
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: $primary-text-color;
+  text-transform: uppercase;
+  align-self: center;
+}

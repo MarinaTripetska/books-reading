@@ -1,0 +1,55 @@
+@import '../../scss/base.scss';
+
+.mainSection {
+  padding: 50px 0;
+  background-color: $bg-color-blue;
+  min-height: calc(100vh - 60px);
+}
+
+.mainContainer {
+  @extend .container;
+  position: relative;
+  z-index: 1;
+}
+
+.buttonAbout {
+  width: 220px;
+  padding: 11px;
+  margin-top: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.9;
+  text-align: center;
+
+  color: $txt-color-white;
+  background: $light-grey;
+  box-shadow: $outer-shadow;
+  transition: all $cubic;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $dark-grey;
+    box-shadow: $active-shadow;
+  }
+}
+
+.title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @include for-size(correct-mobile-only) {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 0;
+  }
+}

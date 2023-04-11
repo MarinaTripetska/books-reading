@@ -1,0 +1,86 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+
+.thumb {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  min-height: 48px;
+  align-items: center;
+  @include for-size(tablet-only) {
+    border-bottom: 1px $table-line solid;
+  }
+  @include for-size(mobile-only) {
+    padding: 15px;
+    //gap: 20px;
+  }
+}
+
+.wrapTitles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  @include for-size(mobile-only) {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+}
+
+.subtitle {
+  display: none;
+  @include for-size(mobile-only) {
+    display: flex;
+    width: 40px;
+    color: #898f9f;
+  }
+}
+
+.wrapItem {
+  @include for-size(mobile-only) {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.textItem {
+  width: 27%;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  @include for-size(mobile-only) {
+    width: 100%;
+  }
+}
+
+.numberItem {
+  width: 70px;
+  text-align: right;
+  @include for-size(mobile-only) {
+    width: 100%;
+  }
+}
+
+.iconItem {
+  width: 40px;
+}
+
+.name {
+  @include for-size(mobile-only) {
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+  }
+}
+.author {
+}
+.year {
+}
+.pages {
+}

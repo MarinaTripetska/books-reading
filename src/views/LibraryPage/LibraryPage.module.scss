@@ -1,0 +1,12 @@
+@import '../../scss/variables';
+@import '../../scss/container';
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px;
+  background-color: $bg-color-blue;
+  @include for-size(tablet) {
+    padding: 40px;
+  }
+}

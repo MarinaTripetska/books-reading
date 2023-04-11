@@ -1,0 +1,53 @@
+@import '../../../scss//variables';
+@import '../../../scss//mixins';
+
+.bookItem {
+  border-bottom: 1px solid #e0e5eb;
+
+  @include for-size(tablet) {
+    padding-left: 30px;
+  }
+}
+
+.bookItem > div {
+  border-bottom: none;
+}
+
+.bookName {
+  position: relative;
+  border-bottom-color: transparent;
+}
+
+.iconBook {
+  position: absolute;
+  top: 17%;
+  left: 10%;
+  width: 18px;
+  height: 14px;
+  fill: $icon-color;
+
+  @include for-size(tablet) {
+    top: 34%;
+    left: 0;
+  }
+}
+
+.btnDel {
+  position: absolute;
+  right: 0;
+  top: 16%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  @include for-size(tablet) {
+    top: 26%;
+  }
+}
+
+.btnDel:hover {
+  box-shadow: $active-shadow;
+}

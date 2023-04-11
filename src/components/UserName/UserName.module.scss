@@ -1,0 +1,34 @@
+@import '../../scss/base.scss';
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  align-self: center;
+}
+
+.circle {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 2.7;
+  background-color: $bg-color-input;
+}
+
+.name {
+  font-family: $primary-font;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2.7;
+  color: $primary-text-color;
+}

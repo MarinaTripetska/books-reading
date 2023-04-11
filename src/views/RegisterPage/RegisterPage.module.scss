@@ -1,0 +1,99 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.mainWrapper {
+  min-height: calc(100vh - 60px);
+  @include for-size(desktop) {
+    display: flex;
+  }
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(
+      to top,
+      rgba(9, 30, 63, 0.8),
+      rgba(9, 30, 63, 0.8)
+    ),
+    url('../../assets/img/picMob.png');
+
+  @include for-size(tablet) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include for-size(desktop) {
+    width: 45%;
+    padding: 0;
+  }
+}
+
+.rightSide {
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  @include for-size(tablet) {
+    padding-bottom: 0;
+  }
+
+  @include for-size(desktop) {
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.title {
+  font-family: $secondary-font;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.text {
+  display: block;
+  text-align: left;
+  padding: 0 25px;
+  @include for-size(tablet) {
+    padding: 0 146px;
+  }
+
+  @include for-size(desktop) {
+    padding: 0;
+    margin-right: auto;
+  }
+}
+
+.text:last-child {
+  margin-top: 20px;
+}
+
+.subTitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.9;
+}
+
+.listItem {
+  color: $secondary-text-color;
+}
+
+.listItem::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  margin-right: 10px;
+  margin-top: 14px;
+  background-size: contain;
+  background-image: url('../../assets/img/li.svg');
+}

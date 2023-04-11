@@ -1,0 +1,56 @@
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
+
+.thumb {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  min-height: 40px;
+  border-top: 1px $table-line solid;
+  border-bottom: 1px $table-line solid;
+  color: $secondary-text-color;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 38px;
+  @include for-size(mobile-only) {
+    display: none;
+  }
+}
+.wrapTitles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+}
+
+.textItem {
+  width: 27%;
+  text-align: left;
+}
+
+.numberItem {
+  width: 70px;
+  text-align: right;
+}
+
+.iconItem {
+  width: 40px;
+}
+
+.name {
+}
+
+.author {
+}
+
+.year {
+}
+
+.pages {
+}
+
+.delete {
+}

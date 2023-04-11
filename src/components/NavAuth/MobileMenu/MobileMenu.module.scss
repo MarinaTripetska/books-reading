@@ -1,0 +1,134 @@
+@import '../../../scss/base.scss';
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 adjust-hue($bg-color-blue, 45deg);
+  }
+}
+
+.overlay {
+  width: 0vw;
+  height: 100vh;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all $cubic;
+
+  &.openMenu {
+    width: 100vw;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.097);
+  }
+}
+
+.contentBox {
+  width: 50%;
+  height: 100vh;
+  padding: 75px 25px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgb(9, 30, 63);
+  opacity: 0.5;
+  transition: all $cubic;
+  transform: translate(100%);
+
+  &.openMenu {
+    transform: translate(0);
+    opacity: 1;
+  }
+
+  @include for-size(correct-mobile-only) {
+    width: 100vw;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 2px;
+  color: $light-grey;
+  text-decoration: none;
+
+  transition: all $cubic;
+
+  svg {
+    fill: $icon-color;
+    transition: all $cubic;
+  }
+
+  &:hover,
+  &:focus {
+    color: $txt-color-white;
+    transform: scale(1.1);
+
+    svg {
+      fill: $txt-color-white;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.logoutBtn {
+  margin: 50px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 40px;
+
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 16px;
+
+  color: $primary-text-color;
+  background-color: $bg-color-blue;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+  }
+}
+
+.burgerBtn {
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0;
+
+  transition: all $cubic;
+
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.openMenu {
+    position: fixed;
+  }
+}

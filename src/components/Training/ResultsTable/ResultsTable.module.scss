@@ -1,0 +1,48 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.table {
+  height: 110px;
+  // overflow: auto;
+  // overscroll-behavior-y: contain;
+  //   text-overflow: ellipsis;
+  @include for-size(tablet) {
+    width: 240px;
+  }
+}
+
+.title {
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $primary-text-color;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 73px;
+  height: 1px;
+  color: $icon-color;
+  background-color: $icon-color;
+  top: 7px;
+  left: 5px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 73px;
+  height: 1px;
+  color: $icon-color;
+  background-color: $icon-color;
+  top: 7px;
+  right: 5px;
+}
+
+.time {
+  color: $secondary-text-color;
+}

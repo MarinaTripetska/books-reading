@@ -1,0 +1,86 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.form {
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+    width: 510px;
+  }
+
+  @include for-size(desktop) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  @include for-size(tablet) {
+    gap: 20px;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+  color: $secondary-text-color;
+}
+
+.input {
+  display: block;
+  width: 110px;
+  height: 42px;
+  padding-left: 5px;
+  background-color: $bg-color-blue;
+  border: 1px solid $icon-color;
+  color: $primary_text-color;
+  font-family: 'Montserat', sans-serif;
+  box-shadow: $inner-shadow;
+  @include for-size(tablet) {
+    width: 110px;
+  }
+}
+
+.input:focus-visible {
+  outline-color: transparent;
+  border: 2px solid $accent-color;
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 44px;
+  width: 171px;
+  height: 42px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: $outer-shadow;
+  @include for-size(tablet) {
+    margin-bottom: 0;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 44px;
+  }
+}
+
+.button:enabled {
+  background-color: $accent-color;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.button:enabled:hover {
+  background-color: $hover-color;
+  box-shadow: $active-shadow;
+}
+
+.button:disabled {
+  background-color: $secondary-text-color;
+  color: $light-grey;
+}

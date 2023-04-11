@@ -1,0 +1,74 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.wrapper {
+  padding-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include for-size(tablet) {
+    padding-top: 40px;
+  }
+}
+
+.sectionWrapper {
+  border-bottom: 1px solid $light-grey;
+}
+
+.sectionTitle {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 19px;
+  color: $primary-text-color;
+}
+
+.titlesWrapper {
+  display: none;
+  color: $secondary-text-color;
+
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.titlesWrapper > div {
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  @include for-size(desktop) {
+    padding-right: 85px;
+  }
+}
+
+.wrapTitls {
+  display: none;
+  color: $secondary-text-color;
+
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include for-size(desktop) {
+    grid-template-columns: 53% 48%;
+  }
+}
+
+.wrapTitls > div {
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.navWrapper {
+  display: flex;
+  color: $accent-color;
+
+  @include for-size(tablet) {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.navLink {
+  margin-left: 10px;
+  color: $secondary-text-color;
+  transition: all $cubic;
+  &:hover {
+    color: $hover-color;
+  }
+  &:last-child {
+    padding-left: 10px;
+    border-left: 1px solid $accent-color;
+  }
+}
