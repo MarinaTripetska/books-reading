@@ -19,7 +19,3 @@
 - React-loader-spinner - spinner is used to display an animated spinner during data loading. The challenge was understanding when and where to apply the loader.
 
 - Formik и Yup - are used together to simplify the process of creating and validating forms on the application pages. It took some time to find information on how to correctly describe validation.
-
-## Each of these libraries and technologies may have its potential challenges, especially for developers without prior experience working with them. However, when used correctly, they can significantly simplify and improve the development process of your project.
-
-## And the main difficulty was, in fact, the lack of experience working with the above-mentioned libraries.

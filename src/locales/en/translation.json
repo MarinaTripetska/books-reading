@@ -141,7 +141,6 @@
       "role": "Team Lead",
       "gitHubPath": "https://github.com/serhiishf",
       "cases": [
-        "Setting up web hosting and server infrastructure",
         "Development of a training page",
         "Leading and managing a team's work"
       ]
@@ -157,10 +156,10 @@
       "role": "Developer",
       "gitHubPath": "https://github.com/MarinaTripetska",
       "cases": [
-        "Functionality of Backend",
+        "Setting up web hosting and server infrastructure",
+        "All Functionality of Backend",
         "This beautiful Intro Page",
-        "404 Page",
-        "Modal windows and Portal Component",
+
         "Diagram Component and logic",
         "Bug fixes and code review"
       ]
