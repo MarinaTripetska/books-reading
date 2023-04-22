@@ -21,7 +21,6 @@ function Calendar({
   onlyAfter,
   today,
   open,
-  // setDate,
   updateDate,
 }: CalendarProps) {
   const CustomInput = ({

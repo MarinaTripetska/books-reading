@@ -14,8 +14,6 @@ import styles from './NavAuth.module.scss';
 import Portal from '../Portal';
 import publicRoots from '../../utils/publicRoots';
 import ModalChoice from '../ModalChoice';
-// import ModalConfirmation from '../ModalConfirmation';
-// import likeIcon from '../../assets/img/like.svg';
 import Loader from '../Loader';
 
 export default function NavAuth() {

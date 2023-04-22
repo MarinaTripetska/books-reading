@@ -37,7 +37,6 @@
     margin-top: 5px;
     align-items: center;
     padding: 11px 20px;
-    // justify-content: space-between;
   }
   @include for-size(desktop) {
     padding-right: 85px;
@@ -117,16 +116,6 @@
   border: none;
   border-radius: 2px;
   position: absolute;
-  // left: 0;
-  // top: 10px;
-
-  // @include for-size(tablet) {
-  //   left: 98%;
-  //   top: 0;
-  // }
-  // @include for-size(desktop) {
-  //   left: 105%;
-  // }
 }
 
 .btnEditDone {

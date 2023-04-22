@@ -71,7 +71,6 @@
 
 .quoteAuthor {
   color: $secondary-text-color;
-  //   border-top: $secondary-text-color 1px solid;
   @include for-size(tablet) {
     font-size: 20px;
   }
@@ -90,7 +89,6 @@
 .quoteAuthor {
   transition: opacity 0.5s ease-in-out;
 }
-
 
 .fadeIn {
   opacity: 1;

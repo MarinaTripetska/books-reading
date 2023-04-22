@@ -12,7 +12,6 @@
   }
   @include for-size(mobile-only) {
     padding: 15px;
-    //gap: 20px;
   }
 }
 
@@ -77,10 +76,4 @@
     white-space: nowrap;
     word-wrap: break-word;
   }
-}
-.author {
-}
-.year {
-}
-.pages {
 }

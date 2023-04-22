@@ -68,10 +68,6 @@ export default function RegisterForm() {
       formik.resetForm();
     },
   });
-  // const handleGoogleBtnClick = () => {
-  //   console.log('GoggleBtn');
-  // };
-
   return (
     <form
       className={styles.form}
@@ -82,11 +78,6 @@ export default function RegisterForm() {
         }
       }}
     >
-      {/* <Button
-        handleClick={handleGoogleBtnClick}
-        btnClass={btnStyles.google}
-        title={'Google'}
-      /> */}
       <div className={styles.inputWrapper}>
         <Input
           labelName={t('auth.name')}

@@ -31,13 +31,6 @@ const Results: FC<ResultsProps> = ({ training, updateTraining }) => {
   const [isOpenModal, setOpenModal] = useState(false);
   const { t } = useTranslation();
 
-  // const removeResult = (index: number) => {
-  //   const newResults = [...results];
-  //   newResults.splice(index, 1);
-  //   setResults(newResults);
-  //   toast.error('Результат успішно видалено!');
-  // };
-
   useEffect(() => {
     if (training.statistics) {
       const updatedStatistics = transformStatistics(training.statistics);

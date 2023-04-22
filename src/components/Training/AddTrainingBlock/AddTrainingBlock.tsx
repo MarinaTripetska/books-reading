@@ -12,8 +12,6 @@ import ButtonBack from '../../ButtonBack';
 import Button from '../Button';
 import { ButtonType } from '../Button/Button';
 
-// import { string } from 'yup/lib/locale';
-
 const checkPermissionCreate = (books: Book[], endDate: string) => {
   if (endDate === '') {
     toast.error('Add Finish Date!');
@@ -50,7 +48,6 @@ const AddTrainingBlock: FC<Props> = ({
 }) => {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
-  // const [bookCounterDays, setBookCounterDays] = useState<number>(0);
   const [controlPanelOpen, setControlPanelOpen] = useState(false);
 
   const updateStartDay = (date: string) => {

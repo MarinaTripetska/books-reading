@@ -46,10 +46,6 @@ export default function LoginForm() {
     },
   });
 
-  // const handleGoogleBtnClick = () => {
-  //   console.log('GoggleBtn');
-  // };
-
   return (
     <form
       className={styles.form}
@@ -60,11 +56,6 @@ export default function LoginForm() {
         }
       }}
     >
-      {/* <Button
-        handleClick={handleGoogleBtnClick}
-        btnClass={btnStyles.google}
-        title={'Google'}
-      /> */}
       <div className={styles.inputWrapper}>
         <Input
           labelName={t('auth.email')}

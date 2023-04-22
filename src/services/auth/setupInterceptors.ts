@@ -1,7 +1,6 @@
 import {
   setTokensError,
   setTokensSuccess,
-  // setTokensRequest,
   getCurrentUserError,
   logoutSuccess,
 } from '../../redux/features/auth/authSlice';
@@ -19,7 +18,6 @@ const setupInterceptors = (store: RootStoreType) => {
       const token = tokenService.getLocalAccessToken();
       if (token) {
         config.headers['Authorization'] = `Bearer ${token}`;
-        // dispatch(setTokensRequest());
       }
       return config;
     },
@@ -30,8 +28,6 @@ const setupInterceptors = (store: RootStoreType) => {
 
   axiosInstance.interceptors.response.use(
     (res) => {
-      // console.log('RES', res);
-      // dispatch(setTokensSuccess());
       return res;
     },
     async (err) => {
@@ -55,15 +51,13 @@ const setupInterceptors = (store: RootStoreType) => {
             const response = await getNewTokens({
               refreshToken: token,
             });
-            // if (response.status === 200) {
+
             const { tokens } = await response.data.data;
             dispatch(setTokensSuccess(tokens));
-            // dispatch(getCurrentUserSuccess());
             tokenService.setLocalTokens(tokens);
             axiosInstance.defaults.headers[
               'Authorization'
             ] = `Bearer ${tokens.accessToken}`;
-            // }
 
             return axiosInstance(originalConfig);
           } catch (_error) {

@@ -6,6 +6,5 @@ module.exports = {
   bracketSpacing: true,
   singleQuote: true,
   printWidth: 80,
-  // Rules for React
   jsxBracketSameLine: false,
 };

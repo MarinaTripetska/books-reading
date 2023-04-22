@@ -39,7 +39,6 @@ interface AboutAppI {
   casesList1: string[];
   casesList2: string[];
 }
-// type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 
 export default function IntroPage() {
   const { t } = useTranslation();
@@ -93,7 +92,6 @@ export default function IntroPage() {
           type="button"
           handleClick={handleClick}
           btnClass={styles.buttonAbout}
-          // title={btnTitle ? btnTitle : ''}
           title={isAboutUs ? t('introPage.aboutApp') : t('introPage.aboutUs')}
         />
       </div>

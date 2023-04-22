@@ -56,7 +56,6 @@ const TrainingFull: React.FC<Props> = ({
         status === statusBook.ACTIVE ? statusBook.DONE : statusBook.ACTIVE,
     };
     await booksApi.updateBookStatus(body);
-    //todo: set results ?
     setBookStatus(objBookId, body.status);
   };
 

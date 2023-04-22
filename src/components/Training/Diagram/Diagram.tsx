@@ -45,12 +45,10 @@ const Diagram: React.FC<Props> = ({ activeTraining, createTraining }) => {
 
   const chooseDataGenerateStrategy = () => {
     if (activeTraining) {
+      //if we have an active training
       setTimeout(() => {
         setData(generateData(activeTraining));
       }, 0);
-
-      //if we have an active training
-      // setData(generateData(activeTraining));
     } else if (isCreateTraining) {
       //if we create training
       const { books, startDate, finishDate } = createTraining;
@@ -70,7 +68,6 @@ const Diagram: React.FC<Props> = ({ activeTraining, createTraining }) => {
 
       <h3 className={styles.title}>
         {t('training.diagramTitle') + ' '}
-
         <span>{getPagesAverage()}</span>
       </h3>
 

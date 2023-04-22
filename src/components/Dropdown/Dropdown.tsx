@@ -1,14 +1,17 @@
 import React from 'react';
-import Select, { StylesConfig, MultiValue, ActionMeta } from 'react-select';
+import Select, { StylesConfig, MultiValue } from 'react-select';
 import { PropsDropdown, DropdownOption } from './Dropdown.interface';
 
-const Dropdown: React.FC<PropsDropdown> = ({ placeHolder, options, noOptionsMessage, onChange }) => {
-
-  const handleChange = (selectedOptions: MultiValue<unknown>,  actionMeta: ActionMeta<unknown>) => {
-    if(!actionMeta) {
-      //console.log('its only for type');
-    }
-    const valueArr = (selectedOptions as DropdownOption[]).map(option => option.value);
+const Dropdown: React.FC<PropsDropdown> = ({
+  placeHolder,
+  options,
+  noOptionsMessage,
+  onChange,
+}) => {
+  const handleChange = (selectedOptions: MultiValue<unknown>) => {
+    const valueArr = (selectedOptions as DropdownOption[]).map(
+      (option) => option.value,
+    );
     onChange(valueArr);
   };
 

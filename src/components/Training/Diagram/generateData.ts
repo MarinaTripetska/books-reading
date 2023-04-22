@@ -54,21 +54,6 @@ function generatePlan(training: ReadingTraining): Datum[] {
 
   return planData;
 }
-// function generateFact(training: ReadingTraining): Datum[] {
-//   const { start, finish, statistics, totalPages } = training;
-
-//   if (statistics.length === 0) {
-//     const average = getAveragePagesPerDay(start, finish, totalPages);
-//     const factData: Datum[] = [{ x: formatDate(start), y: average + 5 }];
-//     return factData;
-//   } else {
-//     const factData: Datum[] = [];
-//     statistics.forEach(({ date, pages }) => {
-//       factData.push({ x: formatDate(date), y: pages });
-//     });
-//     return factData;
-//   }
-// }
 
 function getEndOfDay(date: Date) {
   date.setHours(23, 59, 59, 999);
@@ -81,69 +66,14 @@ function getStartOfDay(date: Date) {
   return newDate;
 }
 
-// export function generateFactTest(training: ReadingTraining): Datum[] {
-//   console.log(training);
-//   const { start, finish, statistics, totalPages } = training;
-//   const factData: Datum[] = [];
-
-//   //if statistic is empty
-//   if (statistics.length === 0) {
-//     const average = getAveragePagesPerDay(start, finish, totalPages);
-//     factData.push({ x: formatDate(start), y: average + 5 });
-//     return factData;
-//   }
-
-//   // Sort statistics by date
-//   const sortedStats = [...statistics].sort(
-//     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
-//   );
-
-//   let prevDate = new Date(sortedStats[0].date);
-//   let startOfDay = getStartOfDay(prevDate);
-//   let endOfDay = getEndOfDay(prevDate);
-//   let sumPages = 0;
-
-//   for (let i = 0; i < statistics.length; i++) {
-//     const statDate = new Date(sortedStats[i].date);
-
-//     if (statDate >= startOfDay && statDate <= endOfDay) {
-//       sumPages += sortedStats[i].pages;
-//       const formattedDate = formatDate(statDate.toISOString());
-
-//       //if next date is next day
-//       if (new Date(sortedStats[i + 1]?.date) > endOfDay) {
-//         factData.push({ x: formattedDate, y: sumPages });
-
-//         prevDate = new Date(sortedStats[i + 1].date);
-//         startOfDay = getStartOfDay(prevDate);
-//         endOfDay = getEndOfDay(prevDate);
-//         sumPages = 0;
-
-//         continue;
-//       }
-
-//       const inx = factData.findIndex((el) => el.x === formattedDate);
-
-//       if (inx === -1) {
-//         factData.push({ x: formattedDate, y: sumPages });
-//         continue;
-//       } else if (inx !== -1) {
-//         factData[inx].y = sumPages;
-//         continue;
-//       }
-//     }
-//   }
-
-//   return factData;
-// }
 export function generateFact(training: ReadingTraining): Datum[] {
   const { start, finish, statistics, totalPages } = training;
-  const factData: Map<string, number> = new Map(); //створюємо об'єкт Map для збереження даних
+  const factData: Map<string, number> = new Map();
 
   //if statistic is empty
   if (statistics.length === 0) {
     const average = getAveragePagesPerDay(start, finish, totalPages);
-    factData.set(formatDate(start), average + 5); //додаємо значення до об'єкту Map
+    factData.set(formatDate(start), average + 5);
   } else {
     // Sort statistics by date
     const sortedStats = [...statistics].sort(
@@ -167,7 +97,7 @@ export function generateFact(training: ReadingTraining): Datum[] {
           factData.set(
             formattedDate,
             (factData.get(formattedDate) || 0) + sumPages,
-          ); //додаємо значення до об'єкту Map
+          );
 
           prevDate = new Date(sortedStats[i + 1].date);
           startOfDay = getStartOfDay(prevDate);
@@ -183,7 +113,6 @@ export function generateFact(training: ReadingTraining): Datum[] {
     }
   }
 
-  // Перетворюємо об'єкт Map назад на масив об'єктів
   const factDataArray = Array.from(factData, ([x, y]) => ({ x, y }));
 
   return factDataArray;

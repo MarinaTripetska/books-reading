@@ -5,7 +5,6 @@ import styles from './ResultsTable.module.scss';
 
 interface Props {
   results: Result[];
-  // onRemove: (id: number) => void;
 }
 
 const ResultsTable: FC<Props> = ({ results }) => {

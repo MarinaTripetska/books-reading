@@ -5,10 +5,6 @@ import { ReactComponent as Arr } from '../../../assets/img/ancle-arr.svg';
 import { ReactComponent as Book } from '../../../assets/img/book.svg';
 import { useTranslation } from 'react-i18next';
 
-// type Props = {
-//   hasBooks: boolean|undefined;
-// };
-
 const LibraryHint = () => {
   const { t } = useTranslation();
 
