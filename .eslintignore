@@ -1,6 +1,4 @@
 # universal rules
+
 webpack.config.js
 .eslintrc.js
-
-# this rule only for migration from js to ts
-#*.js

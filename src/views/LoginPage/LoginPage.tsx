@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LoginForm from '../../components/LoginForm';
 import styles from './LoginPage.module.scss';
-import getRandomNum from '../../services/getRandomNum';
+import getRandomNum from '../../utils/getRandomNum';
 import { useTranslation } from 'react-i18next';
 
 export interface QuoteI {

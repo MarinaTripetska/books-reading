@@ -22,7 +22,7 @@
   "library": {
     "title": "Book title",
     "author": "Author",
-    "year": "Publication date",
+    "year": "Publication year",
     "page": "Amount of pages",
     "yearShort": "Year",
     "pageShort": "Pages",
