@@ -14,7 +14,7 @@ enum Status {
   'EMPTY' = 'empty',
 }
 
-const TrainingPageNew = () => {
+const TrainingPage = () => {
   const [training, setTraining] = useState<ReadingTraining | null>(null);
   const [status, setStatus] = useState(Status.PENDING);
 
@@ -85,4 +85,4 @@ const TrainingPageNew = () => {
   );
 };
 
-export default TrainingPageNew;
+export default TrainingPage;

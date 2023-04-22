@@ -12,8 +12,7 @@ const IntroPage = lazy(() => import('../IntroPage'));
 const LoginPage = lazy(() => import('../LoginPage'));
 const RegisterPage = lazy(() => import('../RegisterPage'));
 const LibraryPage = lazy(() => import('../LibraryPage'));
-// const TrainingPage = lazy(() => import('../TrainingPage'));
-const TrainingPageNew = lazy(() => import('../TrainingPageNew'));
+const TrainingPage = lazy(() => import('../TrainingPage'));
 const Page404 = lazy(() => import('../Page404'));
 
 const PagesRoutes = () => {
@@ -40,8 +39,7 @@ const PagesRoutes = () => {
             <Route path="" element={<LibraryPage />} />
           </Route>
           <Route path="/training" element={<PrivateRoute />}>
-            {/* <Route path="" element={<TrainingPage />} /> */}
-            <Route path="" element={<TrainingPageNew />} />
+            <Route path="" element={<TrainingPage />} />
           </Route>
 
           <Route path="*" element={<Page404 />} />
