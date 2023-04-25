@@ -56,15 +56,6 @@ export default function NavAuth() {
             onConfirmClick={onConfirmLogoutClick}
             onResetClick={onResetLogoutClick}
           />
-
-          {/* TEST confirmation modal:*/}
-
-          {/* <ModalConfirmation
-            iconPath={likeIcon}
-            questionTxt={t('confirmationModal.YouAreGoodButNotEnough')}
-            confirmBtnTxt={t('confirmationModal.confirm')}
-            onConfirmClick={onResetLogoutClick}
-          /> */}
         </Portal>
       )}
 

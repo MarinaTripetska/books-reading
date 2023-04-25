@@ -8,6 +8,7 @@ import { ReactComponent as SvgLibrary } from '../../../assets/img/book.svg';
 import { ReactComponent as SvgHome } from '../../../assets/img/home.svg';
 import useViewportSizes from '../../../hooks/useViewportSizes';
 import breakpoints from '../../../utils/breakpoints';
+import { routs } from '../../../router/routs';
 
 interface Props {
   logoutClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -40,7 +41,7 @@ const MobileMenu: React.FC<Props> = ({ logoutClick }) => {
         <div className={styles.list}>
           <NavLink
             className={styles.link}
-            to={'/library'}
+            to={routs.LIBRARY}
             onClick={onLinkClick}
           >
             <SvgLibrary />
@@ -48,7 +49,7 @@ const MobileMenu: React.FC<Props> = ({ logoutClick }) => {
           </NavLink>
           <NavLink
             className={styles.link}
-            to={'/training'}
+            to={routs.TRAINING}
             onClick={onLinkClick}
           >
             <SvgHome /> {t('navigation.training')}

@@ -19,7 +19,7 @@ import {
 } from './authSlice';
 import apiService from '../../../services/auth/auth-service';
 import tokenService from '../../../services/auth/token-service';
-import i18n from '../../../i18n';
+import i18n from '../../../locales/i18n';
 
 type Credentials = {
   name: string;

@@ -79,9 +79,12 @@
   },
 
   "404Page": {
+    "oops": "Ooops!",
     "articleNotFound": "Article not found",
     "pageCanNotBeFound": "The page you requested cannot be found.",
-    "returnToHomepage": "Return to the Homepage"
+    "returnToHomepage": "Return to the Homepage",
+    "unexpectedError": "Unexpected Error",
+    "somethingWentWrong": "Something went wrong."
   },
 
   "quotes": [

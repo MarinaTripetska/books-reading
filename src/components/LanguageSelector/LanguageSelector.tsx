@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MdLanguage } from 'react-icons/md';
-import '../../i18n';
+import '../../locales/i18n';
 import { useTranslation } from 'react-i18next';
 import styles from './LanguageSelector.module.scss';
 

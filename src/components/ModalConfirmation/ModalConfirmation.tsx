@@ -32,3 +32,11 @@ const ModalConfirmation: React.FC<Props> = ({
 };
 
 export default ModalConfirmation;
+
+/* TEST confirmation modal:*/
+/* <ModalConfirmation
+            iconPath={likeIcon}
+            questionTxt={t('confirmationModal.YouAreGoodButNotEnough')}
+            confirmBtnTxt={t('confirmationModal.confirm')}
+            onConfirmClick={onResetLogoutClick}
+          /> */

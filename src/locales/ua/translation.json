@@ -32,9 +32,12 @@
   },
 
   "404Page": {
+    "oops": "От халепа!",
     "articleNotFound": "Стаття не знайдена",
     "pageCanNotBeFound": "Неможливо знайти сторінку, яку ви шукаєте.",
-    "returnToHomepage": "Повернутися на головну сторінку"
+    "returnToHomepage": "Повернутися на головну сторінку",
+    "unexpectedError": "Неочікувана помилка",
+    "somethingWentWrong": "Щось пішло не так"
   },
 
   "auth": {

@@ -8,7 +8,7 @@
   gap: 15px;
   font-style: $secondary-font;
   font-size: 14px;
-  padding-top: 40px;
+  padding-top: 100px;
   padding-bottom: 40px;
 
   @include for-size(tablet) {
@@ -23,12 +23,17 @@
   text-shadow: 0px 20px 30px rgba(9, 30, 63, 0.1);
 
   @include for-size(tablet) {
-    font-size: 200px;
+    font-size: 100px;
   }
 }
 
 .txt1 {
   font-weight: 700;
+}
+
+.txt3 {
+  font-size: 14px;
+  color: $secondary-text-color;
 }
 
 .link {

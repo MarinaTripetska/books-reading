@@ -1,7 +1,7 @@
 import axiosInstance from '../axiosConfig';
 import { AxiosError } from 'axios';
 import { toast } from 'react-toastify';
-import i18n from '../../i18n';
+import i18n from '../../locales/i18n';
 import BookStatusI from '../../utils/bookStatus';
 
 export type BookT = {
