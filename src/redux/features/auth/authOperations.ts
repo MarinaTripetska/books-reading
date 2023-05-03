@@ -99,6 +99,7 @@ const getCurrent = () => async (dispatch: AppDispatch) => {
     }
   } catch (error) {
     if (error instanceof AxiosError) {
+      console.log(error);
       dispatch(getCurrentUserError());
     }
   }

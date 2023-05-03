@@ -13,7 +13,7 @@ const LoginPage = lazy(() => import('../LoginPage'));
 const RegisterPage = lazy(() => import('../RegisterPage'));
 const LibraryPage = lazy(() => import('../LibraryPage'));
 const TrainingPage = lazy(() => import('../TrainingPage'));
-const Page404 = lazy(() => import('../Page404'));
+const Page404 = lazy(() => import('../ErrorPage'));
 
 const PagesRoutes = () => {
   const isFetchingUser = useAppSelector(authSelectors.getFetching);

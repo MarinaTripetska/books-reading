@@ -13,7 +13,7 @@ const LoginPage = lazy(() => import('../views/LoginPage'));
 const RegisterPage = lazy(() => import('../views/RegisterPage'));
 const LibraryPage = lazy(() => import('../views/LibraryPage'));
 const TrainingPage = lazy(() => import('../views/TrainingPage'));
-const Page404 = lazy(() => import('../views/Page404'));
+const ErrorPage = lazy(() => import('../views/ErrorPage'));
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,11 @@ const router = createBrowserRouter([
     ),
     path: routs.INDEX,
 
-    errorElement: <Page404 />,
+    errorElement: (
+      <Suspense fallback={<Loader />}>
+        <ErrorPage />
+      </Suspense>
+    ),
 
     children: [
       {
