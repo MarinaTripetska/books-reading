@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRouteError, isRouteErrorResponse, NavLink } from 'react-router-dom';
 
@@ -7,10 +7,19 @@ import authSelectors from '../../redux/features/auth/authSelectors';
 import styles from './Page404.module.scss';
 import { routs } from '../../router/routs';
 
-export default function Page404() {
+interface Props {
+  status?: string;
+}
+
+const Page404: FC<Props> = ({ status }) => {
   const { t } = useTranslation();
   const isLogged = useAppSelector(authSelectors.getLoggedOn);
   const error = useRouteError();
+
+  //test error status props:
+  if (status) {
+    return <p>{status}</p>;
+  }
 
   if (isRouteErrorResponse(error)) {
     return (
@@ -47,6 +56,8 @@ export default function Page404() {
       </div>
     );
   } else {
-    return <>ddd</>;
+    return <></>;
   }
-}
+};
+
+export default Page404;
