@@ -7,7 +7,7 @@ import PrivateRoute from '../components/PrivateRoute/PrivateRoute';
 import PublicRoute from '../components/PublicRoute/PublicRoute';
 import Loader from '../components/Loader';
 
-const Layout = lazy(() => import('../Layout'));
+const Layout = lazy(() => import('../views/Layout'));
 const IntroPage = lazy(() => import('../views/IntroPage'));
 const LoginPage = lazy(() => import('../views/LoginPage'));
 const RegisterPage = lazy(() => import('../views/RegisterPage'));
