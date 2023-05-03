@@ -3,6 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 import { useAppSelector } from '../../redux/app/hooks';
 import authSelectors from '../../redux/features/auth/authSelectors';
 import { routs } from '../../router/routs';
+import Page404 from '../../views/Page404/Page404';
 
 type Props = {
   redirectTo?: string;
@@ -10,6 +11,10 @@ type Props = {
 
 const PrivateRoute: FC<Props> = ({ redirectTo = routs.LOGIN }) => {
   const isLogged = useAppSelector(authSelectors.getLoggedOn);
+
+  if (isLogged === undefined) {
+    throw new Error('message');
+  }
 
   return isLogged === true ? <Outlet /> : <Navigate to={redirectTo} replace />;
 };

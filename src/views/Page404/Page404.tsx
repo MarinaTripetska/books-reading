@@ -47,6 +47,6 @@ export default function Page404() {
       </div>
     );
   } else {
-    return <></>;
+    return <>ddd</>;
   }
 }
