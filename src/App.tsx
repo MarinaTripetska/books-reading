@@ -6,6 +6,7 @@ import tokenService from './services/auth/token-service';
 import Toast from './components/Toast';
 import { RouterProvider } from 'react-router-dom';
 import router from './router';
+import Loader from './components/Loader';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} fallbackElement={<Loader />} />
       {/* <PagesRoutes /> */}
       <Toast />
     </>
