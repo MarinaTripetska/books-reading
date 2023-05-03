@@ -76,12 +76,12 @@ const authSlice = createSlice({
       state.isLoading = false;
     },
 
-    getCurrentUserRequest: (state) => {
+    currentUserRequest: (state) => {
       state.isLoading = true;
       state.isFetching = true;
       state.isLoggedOn = undefined;
     },
-    getCurrentUserSuccess: (state, { payload }) => {
+    currentUserSuccess: (state, { payload }) => {
       state.user.name = payload.user.name;
       state.accessToken = payload.tokens.accessToken;
       state.refreshToken = payload.tokens.refreshToken;
@@ -89,21 +89,21 @@ const authSlice = createSlice({
       state.isLoggedOn = true;
       state.isFetching = false;
     },
-    getCurrentUserError: (state) => {
+    currentUserError: (state) => {
       state.isLoading = false;
       state.isLoggedOn = false;
       state.isFetching = false;
     },
 
-    setTokensRequest: (state) => {
+    tokensRequest: (state) => {
       state.isLoading = true;
     },
-    setTokensSuccess: (state, { payload }) => {
+    tokensSuccess: (state, { payload }) => {
       state.isLoading = false;
       state.accessToken = payload.accessToken;
       state.refreshToken = payload.refreshToken;
     },
-    setTokensError: (state) => {
+    tokensError: (state) => {
       state.isLoading = false;
       state.accessToken = '';
       state.refreshToken = '';
@@ -121,12 +121,12 @@ export const {
   logoutError,
   logoutRequest,
   logoutSuccess,
-  getCurrentUserError,
-  getCurrentUserRequest,
-  getCurrentUserSuccess,
-  setTokensRequest,
-  setTokensSuccess,
-  setTokensError,
+  currentUserError,
+  currentUserRequest,
+  currentUserSuccess,
+  tokensRequest,
+  tokensSuccess,
+  tokensError,
 } = authSlice.actions;
 
 export default authSlice.reducer;

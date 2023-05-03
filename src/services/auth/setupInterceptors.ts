@@ -1,7 +1,7 @@
 import {
-  setTokensError,
-  setTokensSuccess,
-  getCurrentUserError,
+  tokensError,
+  tokensSuccess,
+  currentUserError,
   logoutSuccess,
 } from '../../redux/features/auth/authSlice';
 import { getNewTokens } from './auth-service';
@@ -32,15 +32,15 @@ const setupInterceptors = (store: RootStoreType) => {
     },
     async (err) => {
       const originalConfig = err.config;
-
+      console.log(err.response.status);
       if (originalConfig.url !== '/users/login' && err.response) {
         if (
           err.response.status === 401 &&
           originalConfig.url === '/users/refresh-tokens'
         ) {
           tokenService.removeLocalTokens();
-          dispatch(setTokensError());
-          dispatch(getCurrentUserError());
+          dispatch(tokensError());
+          dispatch(currentUserError());
           dispatch(logoutSuccess());
           return Promise.reject(err);
         }
@@ -53,7 +53,7 @@ const setupInterceptors = (store: RootStoreType) => {
             });
 
             const { tokens } = await response.data.data;
-            dispatch(setTokensSuccess(tokens));
+            dispatch(tokensSuccess(tokens));
             tokenService.setLocalTokens(tokens);
             axiosInstance.defaults.headers[
               'Authorization'
