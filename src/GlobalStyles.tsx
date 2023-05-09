@@ -45,7 +45,6 @@ ${normalize}
   --icon-color: #a6abb9;
   --table-line: #e0e5eb;
   --count-num: #091e3f;
-
   --hover-color: #d15807;
   --hover-btn-lib: #47566f;
 
@@ -54,6 +53,8 @@ ${normalize}
   --active-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 
   --cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --header-height: 60px
 }
 
 #root {
