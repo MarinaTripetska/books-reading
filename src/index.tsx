@@ -10,6 +10,7 @@ import { store, persistor } from './redux/app/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import setupInterceptors from './services/auth/setupInterceptors';
+import GlobalStyle from 'GlobalStyles';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -17,6 +18,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
+    <GlobalStyle />
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         {/* <BrowserRouter> */}
