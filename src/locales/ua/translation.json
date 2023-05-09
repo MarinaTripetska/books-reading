@@ -31,7 +31,7 @@
     "reset": "НІ"
   },
 
-  "404Page": {
+  "ErrorPage": {
     "oops": "От халепа!",
     "articleNotFound": "Стаття не знайдена",
     "pageCanNotBeFound": "Неможливо знайти сторінку, яку ви шукаєте.",

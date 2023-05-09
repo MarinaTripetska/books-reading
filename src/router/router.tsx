@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-import Layout from '../Layout';
-import Page404 from '../views/Page404';
-import IntroPage from '../views/IntroPage';
-import LoginPage from '../views/LoginPage';
 import { routs } from './routs';
-import RegisterPage from '../views/RegisterPage/RegisterPage';
-import LibraryPage from '../views/LibraryPage/LibraryPage';
-import TrainingPage from '../views/TrainingPage/TrainingPage';
-import PrivateRoute from '../components/PrivateRoute/PrivateRoute';
-import PublicRoute from '../components/PublicRoute/PublicRoute';
+
+import PrivateRoute from '../components/PrivateRoute';
+import PublicRoute from '../components/PublicRoute';
+import Loader from '../components/Loader';
+
+const Layout = lazy(() => import('../views/Layout'));
+const IntroPage = lazy(() => import('../views/IntroPage'));
+const LoginPage = lazy(() => import('../views/LoginPage'));
+const RegisterPage = lazy(() => import('../views/RegisterPage'));
+const LibraryPage = lazy(() => import('../views/LibraryPage'));
+const TrainingPage = lazy(() => import('../views/TrainingPage'));
+const ErrorPage = lazy(() => import('../views/ErrorPage'));
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
     path: routs.INDEX,
-    errorElement: <Page404 />,
+
+    errorElement: <ErrorPage />,
 
     children: [
       {
@@ -41,11 +45,19 @@ const router = createBrowserRouter([
         element: <PrivateRoute redirectTo={routs.LOGIN} />,
         children: [
           {
-            element: <LibraryPage />,
+            element: (
+              <Suspense fallback={<Loader />}>
+                <LibraryPage />
+              </Suspense>
+            ),
             path: routs.LIBRARY,
           },
           {
-            element: <TrainingPage />,
+            element: (
+              <Suspense fallback={<Loader />}>
+                <TrainingPage />
+              </Suspense>
+            ),
             path: routs.TRAINING,
           },
         ],

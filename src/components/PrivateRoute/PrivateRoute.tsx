@@ -10,7 +10,6 @@ type Props = {
 
 const PrivateRoute: FC<Props> = ({ redirectTo = routs.LOGIN }) => {
   const isLogged = useAppSelector(authSelectors.getLoggedOn);
-
   return isLogged === true ? <Outlet /> : <Navigate to={redirectTo} replace />;
 };
 

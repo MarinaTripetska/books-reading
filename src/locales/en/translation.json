@@ -78,7 +78,7 @@
     "confirm": "OK"
   },
 
-  "404Page": {
+  "ErrorPage": {
     "oops": "Ooops!",
     "articleNotFound": "Article not found",
     "pageCanNotBeFound": "The page you requested cannot be found.",
