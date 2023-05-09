@@ -3,8 +3,8 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { routs } from './routs';
 
-import PrivateRoute from '../components/PrivateRoute/PrivateRoute';
-import PublicRoute from '../components/PublicRoute/PublicRoute';
+import PrivateRoute from '../components/PrivateRoute';
+import PublicRoute from '../components/PublicRoute';
 import Loader from '../components/Loader';
 
 const Layout = lazy(() => import('../views/Layout'));
@@ -17,45 +17,25 @@ const ErrorPage = lazy(() => import('../views/ErrorPage'));
 
 const router = createBrowserRouter([
   {
-    element: (
-      <Suspense fallback={<Loader />}>
-        <Layout />
-      </Suspense>
-    ),
+    element: <Layout />,
     path: routs.INDEX,
 
-    errorElement: (
-      <Suspense fallback={<Loader />}>
-        <ErrorPage />
-      </Suspense>
-    ),
+    errorElement: <ErrorPage />,
 
     children: [
       {
         element: <PublicRoute restricted redirectTo={routs.LIBRARY} />,
         children: [
           {
-            element: (
-              <Suspense fallback={<Loader />}>
-                <IntroPage />
-              </Suspense>
-            ),
+            element: <IntroPage />,
             index: true,
           },
           {
-            element: (
-              <Suspense fallback={<Loader />}>
-                <LoginPage />
-              </Suspense>
-            ),
+            element: <LoginPage />,
             path: routs.LOGIN,
           },
           {
-            element: (
-              <Suspense fallback={<Loader />}>
-                <RegisterPage />
-              </Suspense>
-            ),
+            element: <RegisterPage />,
             path: routs.REGISTRATION,
           },
         ],

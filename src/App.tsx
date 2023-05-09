@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-// import PagesRoutes from './views/PagesRoutes';
+import React, { Suspense, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from './redux/app/hooks';
 import authOperations from './redux/features/auth/authOperations';
 import tokenService from './services/auth/token-service';
@@ -21,11 +20,10 @@ function App() {
   }, [dispatch, accessToken]);
 
   return !isFetchingUser ? (
-    <>
+    <Suspense fallback={<Loader />}>
       <RouterProvider router={router} fallbackElement={<Loader />} />
-      {/* <PagesRoutes /> */}
       <Toast />
-    </>
+    </Suspense>
   ) : (
     <Loader />
   );

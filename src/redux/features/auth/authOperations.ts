@@ -1,4 +1,4 @@
-import axios, { AxiosError } from 'axios';
+import { AxiosError } from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AppDispatch } from '../../app/store';
@@ -28,8 +28,6 @@ type Credentials = {
 };
 
 type LoginCreds = Omit<Credentials, 'name'>;
-
-axios.defaults.baseURL = 'https://rsclone.com/api/v1';
 
 const register =
   (credentials: Credentials) => async (dispatch: AppDispatch) => {
