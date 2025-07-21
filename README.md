@@ -23,3 +23,5 @@
 ## Each of these libraries and technologies may have its potential challenges, especially for developers without prior experience working with them. However, when used correctly, they can significantly simplify and improve the development process of your project.
 
 ## And the main difficulty was, in fact, the lack of experience working with the above-mentioned libraries.
+
+### Frontend deployed on Netlify, backend deployed on Render
